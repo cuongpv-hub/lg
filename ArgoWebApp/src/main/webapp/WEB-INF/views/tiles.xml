@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- Template for Login and Register Page -->
+	<definition name="page-layout" template="/WEB-INF/views/layout/page-layout.jsp">
+		<put-list-attribute name="stylesheets">
+			<!--
+			<add-attribute value="/resources/css/AdminLTE.min.css" />
+			<add-attribute value="/resources/css/style.css" />
+			-->
+		</put-list-attribute>
+		<put-list-attribute name="javascripts">
+			
+		</put-list-attribute>
+	</definition>
+	
+	<!-- Template for all the Common Page -->
+	<definition name="main-layout" template="/WEB-INF/views/layout/main-layout.jsp">
+		<put-attribute name="menu" value="home" />
+		<put-attribute name="footer" value="/WEB-INF/views/layout/main-footer.jsp" />
+		
+		<put-list-attribute name="stylesheets">
+		</put-list-attribute>
+			
+		<put-list-attribute name="javascripts">	
+		</put-list-attribute>
+		
+	</definition>
+	
+	<!-- Template for Upload Page -->
+	<definition name="ckeditor-resource-layout" template="/WEB-INF/views/layout/upload-layout.jsp">
+		<put-list-attribute name="stylesheets">
+		</put-list-attribute>
+		<put-list-attribute name="javascripts">
+		</put-list-attribute>
+	</definition>
+	
+	<!-- Template for all the Admin Page -->
+	<definition name="admin-layout" template="/WEB-INF/views/layout/admin-layout.jsp">
+		<!-- <put-attribute name="header" value="/WEB-INF/views/layout/main-header.jsp" 
+			/> <put-attribute name="menu" value="/WEB-INF/views/layout/main-menu-sidebar.jsp" 
+			/> <put-attribute name="control" value="/WEB-INF/views/layout/main-control-sidebar.jsp" 
+			/> -->
+		<put-attribute name="footer" value="/WEB-INF/views/layout/admin-footer.jsp" />
+
+		<put-list-attribute name="stylesheets">
+			<add-attribute value="/resources/css/AdminLTE.min.css" />
+			<add-attribute value="/resources/css/skins/_all-skins.min.css" />
+			<!-- 
+			<add-attribute value="/resources/css/style.css" />
+			-->
+		</put-list-attribute>
+		<put-list-attribute name="javascripts">
+			<add-attribute value="/resources/js/adminlte.min.js" />
+			<!-- 
+			<add-attribute value="/resources/js/demo.js" />
+			-->
+		</put-list-attribute>
+	</definition>
+	
+	<!-- Mapping for common pages -->
+	<definition name="login" extends="page-layout">
+		<put-attribute name="title" value="login.title" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/login.jsp" />
+		<put-attribute name="current" value="login" />
+	</definition>
+	
+	<definition name="register" extends="page-layout">
+		<put-attribute name="title" value="register.title" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/register.jsp" />
+	</definition>
+	
+	<definition name="register-success" extends="page-layout">
+		<put-attribute name="title" value="register.title" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/register-success.jsp" />
+	</definition>
+	
+	<definition name="active-success" extends="page-layout">
+		<put-attribute name="title" value="active.title" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/active-success.jsp" />
+	</definition>
+	
+	<definition name="active-fail" extends="page-layout">
+		<put-attribute name="title" value="active.title" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/active-fail.jsp" />
+	</definition>
+	
+	<!-- Mapping for main contents -->
+	<definition name="home" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="home" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/home.jsp" />
+		
+		<put-list-attribute name="javascripts">	
+			<add-attribute value="/resources/js/controller/home-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<!-- Mapping for main contents -->
+	<definition name="company" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="company" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/company.jsp" />
+		
+		<put-list-attribute name="javascripts">	
+			<add-attribute value="/resources/js/controller/company-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="company-list" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="company" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/company-list.jsp" />
+		
+		<put-list-attribute name="javascripts">	
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="company-detail" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="company" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/company-detail.jsp" />
+		
+		<put-list-attribute name="javascripts">				
+			<add-attribute value="/resources/js/controller/company-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<!-- Start Project -->
+	<definition name="project-list" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="company" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/project-list.jsp" />
+		
+		<put-list-attribute name="javascripts">				
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="project-detail" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="company" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/project-detail.jsp" />
+		
+		<put-list-attribute name="javascripts">				
+			<add-attribute value="/resources/js/controller/project-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="project-form" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="company" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/project-form.jsp" />
+		
+		<put-list-attribute name="javascripts">				
+			<add-attribute value="/resources/js/controller/project-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	<!-- End Project -->
+	
+	<!-- Start Farmer -->
+	<definition name="farmer" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="farmer" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/farmer.jsp" />
+		
+		<put-list-attribute name="javascripts">	
+			<add-attribute value="/resources/js/controller/farmer-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	<!-- End Farmer -->
+	
+	<!-- Start Product -->
+	<definition name="product-list" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="farmer" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/product-list.jsp" />
+		
+		<put-list-attribute name="javascripts">				
+			<add-attribute value="/resources/js/controller/product-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="product-detail" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="farmer" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/product-detail.jsp" />
+		
+		<put-list-attribute name="javascripts">				
+			<add-attribute value="/resources/js/controller/product-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="product-form" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="farmer" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/product-form.jsp" />
+		
+		<put-list-attribute name="javascripts">				
+			<add-attribute value="/resources/js/controller/product-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	<!-- End Product -->
+	
+	<!-- START LAND -->
+	<definition name="land-list" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="farmer" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/land-list.jsp" />
+		
+		<put-list-attribute name="javascripts">				
+			<add-attribute value="/resources/js/controller/land-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="land-detail" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="farmer" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/land-detail.jsp" />
+		
+		<put-list-attribute name="javascripts">				
+			<add-attribute value="/resources/js/controller/land-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="land-form" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="farmer" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/land-form.jsp" />
+		
+		<put-list-attribute name="javascripts">				
+			<add-attribute value="/resources/js/controller/land-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	<!-- END LAND -->
+	
+	<!-- Scientist -->
+	<definition name="scientist" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="scientist" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/scientist.jsp" />
+		
+		<put-list-attribute name="javascripts">	
+			<add-attribute value="/resources/js/controller/scientist-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="article-list" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="scientist" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/article-list.jsp" />
+		
+		<put-list-attribute name="javascripts">				
+			<add-attribute value="/resources/js/controller/article-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="article-detail" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="scientist" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/article-detail.jsp" />
+		
+		<put-list-attribute name="javascripts">				
+			<add-attribute value="/resources/js/controller/article-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="article-form" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="scientist" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/article-form.jsp" />
+		
+		<put-list-attribute name="javascripts">				
+			<add-attribute value="/resources/js/controller/article-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	<!-- End Scientist -->
+	
+	<!-- News -->
+	<definition name="news-list" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="administrative" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/news-list.jsp" />
+		
+		<put-list-attribute name="javascripts">				
+			<add-attribute value="/resources/js/controller/news-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="news-detail" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="administrative" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/news-detail.jsp" />
+		
+		<put-list-attribute name="javascripts">				
+			<add-attribute value="/resources/js/controller/news-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="news-form" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="administrative" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/news-form.jsp" />
+		
+		<put-list-attribute name="javascripts">				
+			<add-attribute value="/resources/js/controller/news-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	<!-- End News -->
+	
+	<definition name="administrative" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="administrative" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/administrative.jsp" />
+		
+		<put-list-attribute name="javascripts">			
+			<add-attribute value="/resources/js/controller/administrative-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="administrative-detail" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/administrative-detail.jsp" />
+		<put-attribute name="menu" value="administrative" />
+		
+		<put-list-attribute name="javascripts">			
+			<add-attribute value="/resources/js/controller/administrative-ctrl.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<!-- Start Profile -->
+	<definition name="profile-detail" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="home" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/profile-detail.jsp" />
+		
+		<put-list-attribute name="javascripts">				
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="profile-form" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="menu" value="home" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/profile-form.jsp" />
+		
+		<put-list-attribute name="javascripts">				
+		</put-list-attribute>
+	</definition>
+	<!-- End Profile -->
+	
+	<!-- CKEditor pages -->
+	<definition name="image-upload" extends="ckeditor-resource-layout">
+		<put-attribute name="title" value="upload.image.title" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/image-upload.jsp" />
+	</definition>
+	
+	<definition name="image-upload-classic" extends="ckeditor-resource-layout">
+		<put-attribute name="title" value="upload.image.title" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/image-upload-classic.jsp" />
+	</definition>
+	
+	<definition name="image-browse" extends="ckeditor-resource-layout">
+		<put-attribute name="title" value="select.image.title" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/image-browse.jsp" />
+	</definition>
+	
+	<!-- Mapping for admin contents -->
+	<definition name="countryList" extends="admin-layout">
+		<put-attribute name="title" value="country.title" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/admin/countryList.jsp" />
+	</definition>
+
+	<definition name="countryForm" extends="admin-layout">
+		<put-attribute name="title" value="country.title" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/admin/countryForm.jsp" />
+	</definition>
+	
+	<definition name="common-category-list" extends="admin-layout">
+		<put-attribute name="title" value="common.category.title" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/admin/common-category-list.jsp" />
+	</definition>
+
+	<definition name="common-category-form" extends="admin-layout">
+		<put-attribute name="title" value="common.category.title" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/admin/common-category-form.jsp" />
+	</definition>
+	
+	<!-- Mapping for Error Pages -->
+	<definition name="notPermission" extends="admin-layout">
+		<put-attribute name="title" value="admin.error.title" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/admin/notPermission.jsp" />
+	</definition>
+	
+	<definition name="error404" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="body" value="/WEB-INF/views/error/page_404.jsp" />
+	</definition>
+
+	<definition name="error500" extends="main-layout">
+		<put-attribute name="title" value="app.title" />
+		<put-attribute name="body" value="/WEB-INF/views/error/page_500.jsp" />
+	</definition>
+	
+	<!-- Modal Search -->
+	<definition name="modal-search-land" template="/WEB-INF/views/pages/modal-search-land.jsp">
+		<put-list-attribute name="stylesheets">
+		</put-list-attribute>
+		<put-list-attribute name="javascripts">			
+		</put-list-attribute>
+	</definition>
+	
+   	<definition name="modal-search-product" template="/WEB-INF/views/pages/modal-search-product.jsp">
+		<put-list-attribute name="stylesheets">
+		</put-list-attribute>
+		<put-list-attribute name="javascripts">			
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="modal-search-project" template="/WEB-INF/views/pages/modal-search-project.jsp">
+		<put-list-attribute name="stylesheets">
+		</put-list-attribute>
+		<put-list-attribute name="javascripts">			
+		</put-list-attribute>
+	</definition>
+    
+    <definition name="modal-search-scientist" template="/WEB-INF/views/pages/modal-search-scientist.jsp">
+		<put-list-attribute name="stylesheets">
+		</put-list-attribute>
+		<put-list-attribute name="javascripts">			
+		</put-list-attribute>
+	</definition>
+</tiles-definitions>
