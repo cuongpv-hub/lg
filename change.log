@@ -26,19 +26,18 @@ git remote add origin https://github.com/cuongpv21/lg.git
 
  git remote rename origin cuongpv24
  git push cuongpv24 master
- 
+
  git push origin master
- 
+
  git remote add cuong  https://cuongpv-hub:180690aA#@github.com/cuongpv-hub/lg.git
- 
- 
- 
+
+
+
 git remote add origin git@github.com:cuongpv-hub/lg.git
 
 git commit -m "Start new project"
 git push origin master
 
 
-git commit -m "Add new file change log"
+git commit -m "Add new file change log to you own"
 git checkout -b issue2
-
