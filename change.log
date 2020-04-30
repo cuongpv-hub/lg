@@ -39,5 +39,5 @@ git commit -m "Start new project"
 git push origin master
 
 
-git commit -m "Toi dang di tren co non"
+git commit -m "Toi dang di tren co non toi khong thay su thay doi"
 git checkout -b issue2
