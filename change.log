@@ -39,5 +39,5 @@ git commit -m "Start new project"
 git push origin master
 
 
-git commit -m "Add new file change log to you own"
+git commit -m "Add new file change log to you own why dont conflig with master"
 git checkout -b issue2
