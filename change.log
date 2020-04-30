@@ -41,4 +41,5 @@ git push origin master
 
 git commit -m "Add new file change log"
 git checkout -b issue2
+why dont conflig with master
 
