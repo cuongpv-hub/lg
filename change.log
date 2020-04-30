@@ -41,4 +41,4 @@ git push origin master
 
 git checkout -b feature_xxx
 git commit -m "Add new file change log"
-git push origin feature_xxx
+git push origin master
