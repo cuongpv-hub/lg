@@ -8,7 +8,7 @@ Notepad++ v7.8.6 Enhancement & bug-fixes:
 6.  Add support of smart-indenting for Perl and Rust.
 7.  Make recorded macro (IDC_FINDNEXT & IDC_FINDPREV)retro-compatible up to 7.8.4.
 
-
+Git là tên gọi của một Hệ thống quản lý phiên bản phân tán (Distributed Version Control System – DVCS) là một trong những hệ thống quản lý phiên bản phân tán phổ biến nhất hiện nay. DVCS nghĩa là hệ thống giúp mỗi máy tính có thể lưu trữ nhiều phiên bản khác nhau của một mã nguồn được nhân bản (clone) từ một kho chứa mã nguồn (repository), mỗi thay đổi vào mã nguồn trên máy tính sẽ có thể ủy thác (commit) rồi đưa lên máy chủ nơi đặt kho chứa chính. Và một máy tính khác (nếu họ có quyền truy cập) cũng có thể clone lại mã nguồn từ kho chứa hoặc clone lại một tập hợp các thay đổi mới nhất trên máy tính kia. Trong Git, thư mục làm việc trên máy tính gọi là Working Tree.
 Included plugins:
 
 1.  NppExport v0.2.9
