@@ -29,7 +29,7 @@
 		<spring-data-mongo.version>1.10.11.RELEASE</spring-data-mongo.version>
 		
 		<activemq.version>5.15.3</activemq.version>
-		<netty.version>4.1.23.Final</netty.version>
+		<netty.version>4.1.42.Final</netty.version>
 		<reactor.version>2.0.8.RELEASE</reactor.version>
 
 		<apache-tiles.version>3.0.8</apache-tiles.version>
