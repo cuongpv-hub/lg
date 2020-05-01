@@ -1,0 +1,111 @@
+Hướng dẫn về Git cho người mới bắt đầu
+Sơ đồ trang
+
+Nhập môn
+Phát triển
+Tài liệu tham khảo
+Hướng dẫn 3: Hãy thay đổi commit!
+
+1. Commit --amend
+Tại hướng dẫn này, sẽ sử dụng local repository mà lịch sử trước đó đã được chuẩn bị
+
+Hãy tải xuốngtừ đây.
+
+Tại chổ này, sẽ chỉnh sửa commit đầu tiên
+
+Di chuyển đến thư mục stepup-tutorial/tutorial1 đã tải về. Lịch sử của repository này sẽ thành trạng thái hiển thị như sơ đồ bên dưới.
+
+The history of repository.
+
+Hãy thử kiểm tra lịch sử bằng lệnh log.
+
+$ git log
+commit 326fc9f70d022afdd31b0072dbbae003783d77ed
+Author: yourname <yourname@yourmail.com>
+Date:   Mon Jul 16 23:17:56 2012 +0900
+
+    Thêm giải thích của add
+
+commit 48eec1ddf73a7fb508ef664efd6b3d873631742f
+Author: yourname <yourname@yourmail.com>
+Date:   Mon Jul 16 23:16:14 2012 +0900
+
+    first commit
+Trước tiên, mở file sample.txt rồi thêm giải thích commit.
+
+Đến cả con khỉ cũng hiểu được lệnh Git.
+Đăng ký thay đổi add ở index.
+Ghi trạng thái của commit index.
+Thêm lựa chọn --amend rồi commit.
+
+$ git add sample.txt
+$ git commit --amend
+Giải thích commit của commit ngay trước đó sẽ được hiển thị bằng trình soạn thảo. Thay đổi thành [thêm mô tả add và commit] lưu lại rồi kết thúc.
+
+Nội dung commit đã được chỉnh sửa. Hãy kiểm tra lịch sử và giải thích commit bằng lệnh log.
+
+ commit --amend 
+
+$ git log
+commit e9d75a02e62814541ee0410d9c1d1bf47ab1c057
+Author: yourname <yourname@yourmail.com>
+Date:   Mon Jul 16 23:17:56 2012 +0900
+
+    Thêm giải thích của add và commit
+
+commit 48eec1ddf73a7fb508ef664efd6b3d873631742f
+Author: yourname <yourname@yourmail.com>
+Date:   Mon Jul 16 23:16:14 2012 +0900
+
+    first commit
+Trở về
+Kế tiếp
+Branch
+Nói về branch
+Vận dụng branch
+Chuyển đổi branches
+Tích hợp branches
+Ví dụ vận dụng bằng nhánh chủ đề (topic branch) và nhánh tích hợp (integration branch)
+Hướng dẫn 1: Sử dụng branch
+0. Chuẩn bị trước
+1. Tạo branch
+2. Chuyển đổi branches
+3. Merge branches
+4. Xóa branch
+5. Làm việc song song
+6. Giải quyết xung đột bằng merge
+7. Rebase branch
+Remote repository
+Pulling
+Fetching
+Pushing
+Tag
+Tag
+Hướng dẫn 2: Sử dụng tags
+0. Chuẩn bị trước
+1. Thêm lightweight tag
+2. Thêm annotated tag
+3. Xóa tag
+Thay đổi commit
+Chỉnh sửa commit ngay trước đó
+Hủy bỏ commit trước đó
+Loại bỏ commit
+Trích xuất commit
+Thay đổi lịch sử commit
+Tổng hợp commit trên branch thành một rồi merge
+Hướng dẫn 3: Thay đổi commit
+1. Commit --amend
+2. Revert
+3. Reset
+4. Cherry-pick
+5. Tổng hợp commit bằng rebase -i
+6. Sửa commit bằng rebase -i
+7. Merge --squash
+Tiếng Việt
+Facebooktwitter
+Powered by
+Backlog - Công cụ quản lý dự án dành cho tất cả mọi người đang làm việc trong nhóm
+Copyright © 2004-2020 Nulab Inc. All rights reserved.
+
+UP
+Phản hồi
