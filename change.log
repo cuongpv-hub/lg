@@ -42,3 +42,8 @@ git push origin master
 git commit -m "Toi dang di tren co non"
 git checkout -b issue2
 git remote add origin git@github.com:cuongpv-hub/lg.git
+
+Đến cả con khỉ cũng hiểu được lệnh Git
+add: Đăng ký thay đổi trong index
+commit: Lưu lại trạng thái của index
+pull: Lấy nội dung của remote repository
