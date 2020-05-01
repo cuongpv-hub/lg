@@ -33,16 +33,8 @@ git remote add origin https://github.com/cuongpv21/lg.git
 
 
 
-git remote add origin git@github.com:cuongpv-hub/lg.git
+Tình trạng không có chỉ định lựa chọn thì sẽ hiển thị phần sai khác của index với cây công việc (working tree).
 
-git commit -m "Start new project"
-git push origin master
+Khi thêm lựa chọn -cached thì sẽ hiển thị phần sai khác của HEAD với index.
 
-
-git commit -m "Toi dang di tren co non"
-git checkout -b issue2
-git remote add origin git@github.com:cuongpv-hub/lg.git
-Đến cả con khỉ cũng hiểu được lệnh Git.
-add: Đăng ký thay đổi trong index
-commit: Lưu lại trạng thái của index
-pull: Lấy nội dung của remote repository
+Và khi chỉ định commit và HEAD thì sẽ hiển thị phần sai khác của HEAD được chỉ định với cây công việc (working tree).
