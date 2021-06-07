@@ -37,7 +37,7 @@
 		<mongodb-driver.version>3.5.0</mongodb-driver.version>
 		
 		<!-- Logging -->
-		<logback.version>1.0.13</logback.version>
+		<logback.version>1.2.0</logback.version>
 		<slf4j.version>1.7.25</slf4j.version>
 		<jcl-slf4j.version>1.7.25</jcl-slf4j.version>
 
