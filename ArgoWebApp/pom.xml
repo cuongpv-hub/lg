@@ -21,7 +21,7 @@
 
 		<!-- <spring-framework.version>4.3.14.RELEASE</spring-framework.version> -->
 		<spring-framework.version>4.3.7.RELEASE</spring-framework.version>
-		<spring-security.version>4.2.2.RELEASE</spring-security.version>
+		<spring-security.version>5.5.7</spring-security.version>
 		
 		<!-- Spring Data -->
 		<spring-data.version>1.11.6.RELEASE</spring-data.version>
