@@ -26,7 +26,7 @@
 		<!-- Spring Data -->
 		<spring-data.version>1.11.6.RELEASE</spring-data.version>
 		<spring-data-common.version>1.13.10.RELEASE</spring-data-common.version>
-		<spring-data-mongo.version>1.10.11.RELEASE</spring-data-mongo.version>
+		<spring-data-mongo.version>3.3.5</spring-data-mongo.version>
 		
 		<activemq.version>5.15.3</activemq.version>
 		<netty.version>4.1.23.Final</netty.version>
